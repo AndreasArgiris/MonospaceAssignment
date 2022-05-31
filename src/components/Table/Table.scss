@@ -1,0 +1,246 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+h3{
+    @include margin-padding-none;
+}
+.table{
+    position: relative;
+    width: 1722px;
+    height: 618px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    border-top:2px solid $border-color;
+    border-bottom:2px solid $border-color;
+    &-headers{
+        position: relative;
+        width: 100%;
+        height: calc(618px/11);
+        padding: 0 32px 0 20px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        
+    }
+    &-body{
+        position: relative;
+        width: 100%;
+        height: calc(618px/11);
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 0 32px 0 20px;
+        border-top:2px solid $border-color;
+        background-color: inherit;
+        transition: background-color .3s ease-in-out;
+        &:hover{
+            background-color: $row-hover-color;
+        }
+    }
+}
+.table-checkbox{
+    position: relative;
+    width: 16px;
+    height: 100%;
+    @include flex-center;
+    & input{
+        position: relative;
+        width: 100%;
+        height: 16px;
+        @include margin-padding-none;
+        border-radius: 0;
+        accent-color: $basic-heading-blue;
+    }
+}
+//table-type
+.table-type{
+    position: relative;
+    width: 34px;
+    height: 100%;
+    margin: 0 180px 0 20px;
+    @include flex-center;
+   & h3{
+        color: $basic-heading-blue;
+        @include text-standard-styles;
+    }
+    &-body h3{
+        color: $bold-heading-blue; 
+        @include text-standard-styles;
+    }
+    &-body .type-border{
+        position: relative;
+        height: 24px;
+        width: 34px;
+        @include flex-center;       
+    }
+    &-body .supervisor{
+        background-color: $salmon-color;
+    }
+    &-body .guest{
+        background-color: $sky-color;
+    }
+    &-body .stakeholder{
+        background-color: $violet-color;
+    }
+    &-body .employee{
+        background-color: $sunset-color;
+    }
+    
+}
+
+//table-name
+.table-name{
+    position: relative;
+    width: 119px;
+    height: 100%;
+    margin-right:180px;
+    @include flex-center-start;
+   & h3{
+    color: $basic-heading-blue;
+    @include text-standard-styles;
+    }
+    &-body{
+        position: relative;
+        width: 119px;
+        height: 100%;
+        margin-right:180px;
+        @include flex-center-start;
+        & h3{
+            color:$basic-heading-blue;
+            @include text-light-styles;
+            cursor: pointer;
+            transition: all .3s ease-in-out;
+            &:hover{
+                font-weight: 600;
+            }
+        }
+    }
+}
+
+//table-email
+.table-email{
+    position: relative;
+    width: 215px;
+    height: 100%;
+    margin-right:180px;
+    @include flex-center-start;
+   & h3{
+    color:$basic-heading-blue;
+    @include text-standard-styles;
+    }
+    &-body{
+        position: relative;
+        width: 215px;
+        height: 100%;
+        margin-right:180px;
+        @include flex-center-start;
+        & h3{
+            color: $basic-heading-blue;
+            @include text-light-styles;
+            cursor: pointer;
+            transition: all .3s ease-in-out;
+            &:hover{
+                font-weight: 600;
+            }
+        }
+    }
+}
+//table-phone
+.table-phone{
+    position: relative;
+    width: 168px;
+    height: 100%;
+    margin-right:510px;
+    @include flex-center-start;
+   & h3{
+    color:$basic-heading-blue;
+    @include text-standard-styles;
+    }
+    &-body{
+        position: relative;
+        width: 168px;
+        height: 100%;
+        margin-right:510px;
+        @include flex-center-start;
+        & h3{
+            color:$basic-heading-blue;
+            @include text-light-styles;
+            cursor: pointer;
+            transition: all .3s ease-in-out;
+            &:hover{
+                font-weight: 600;
+            }
+        }
+    }
+}
+//table-status
+.table-status{
+    position: relative;
+    width: 48px;
+    height: 100%;
+    @include flex-center;
+    @include margin-padding-none;
+   & h3{
+    color:$basic-heading-blue;
+    @include text-standard-styles;
+    }
+    &-body{
+        position: relative;
+        width: 48px;
+        height: 100%;
+        margin:0;
+        @include flex-center;
+    }
+}
+
+//custom switch active/unactive
+.switch-user_unactive{
+    position: relative;
+    display: block;
+    width: 24px;
+    height: 14px;
+    border: 1px solid $switch-unactive-border;
+    border-radius: 6.5px;
+    background-color: $switch-background-color;
+    @include margin-padding-none;
+    cursor: pointer;
+    &::after{
+        content: '';
+        position: absolute;
+        top:50%;
+        left: calc(50% - 1.5px);
+        transform: translate(calc(-50% - (3px)) ,-50%);
+        height: 11px;
+        width: 11px;
+        background-color:$pure-white;
+        box-sizing: border-box;
+        border: 1px solid $switch-unactive-border;
+        border-radius: 50%;
+    }
+}
+.switch-user_active{
+    position: relative;
+    display: block;
+    height: 14px;
+    width: 24px;
+    background-color: $switch-background-active-color;
+    border: 1px solid $switch-active-border;
+    border-radius: 6.5px;
+    @include margin-padding-none;
+    cursor: pointer;
+    &::after{
+        content: '';
+        position: absolute;
+        top:50%;
+        right: calc(50% - 1.5px);
+        transform: translate(calc(50% + (3px)) ,-50%);
+        width: 11px;
+        height: 11px;
+        box-sizing: border-box;
+        background-color: $pure-white;
+        border: 1px solid $switch-active-border;
+        border-radius: 50%;
+    }
+}

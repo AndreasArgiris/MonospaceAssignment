@@ -1,0 +1,44 @@
+//prefix mixin
+@mixin prefix($property, $value, $prefixes) {
+  @each $prefix in $prefixes {
+    -#{$prefix}-#{$property}: $value;
+  }
+  #{$property}: $value;
+}
+//center with flex in row mixin
+@mixin flex-center {
+  @include prefix(display, flex, moz webkit);
+  @include prefix(align-items, center, moz webkit);
+  @include prefix(justify-content, center, moz webkit);
+}
+//center with flex in row justify start
+@mixin flex-center-start {
+  @include prefix(display, flex, moz webkit);
+  @include prefix(align-items, center, moz webkit);
+  @include prefix(justify-content, flex-start, moz webkit);
+}
+//center with flex in column mixin
+@mixin flex-column-center {
+  @include prefix(display, flex, moz webkit);
+  @include prefix(flex-direction, column, moz webkit);
+  @include prefix(align-items, center, moz webkit);
+  @include prefix(justify-content, center, moz webkit);
+}
+@mixin margin-padding-none {
+  padding: 0;
+  margin: 0;
+}
+//text header styles
+@mixin text-standard-styles{
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 0;
+  line-height: 15px;
+}
+//text body styles
+@mixin text-light-styles{
+  font-size: 14px;
+  font-weight: normal;
+  letter-spacing: 0;
+  line-height: 18px;
+}

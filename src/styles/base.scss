@@ -1,0 +1,22 @@
+@import './variables';
+*,
+*::before,
+*::after,
+html {
+  box-sizing: border-box !important;
+  margin: 0;
+  padding: 0;
+}
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+  font-size: 1rem;
+  font-family: 'Montserrat',sans-serif;
+  background-color: $main-background-color;
+}
+main {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  padding: 207px 99px 207px 99px ;
+}

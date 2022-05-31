@@ -1,0 +1,46 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+.table-users_bar{
+    position: relative;
+    width: 1678px;
+    height: 32px;
+    margin: 0 32px 16px 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.table-users_bar-left{
+    @include flex-center-start;
+    & .users-icon{
+        width: 32px;
+        height: 32px;
+        color: $bar-dark-heading-color;
+        @include margin-padding-none
+    }
+    & h2{
+        font-size: 18px;
+        font-weight: 500;
+        letter-spacing: 0;
+        line-height: 22px;
+        color:$bar-dark-heading-color;
+        margin-left: 12px;
+    }
+}
+.table-users_bar-right{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    & h2{
+        font-size: 12px;
+        font-weight: 500;
+        letter-spacing: 0;
+        line-height: 15px;
+        text-align: right;
+        color: $bar-heading-color;
+        margin-right: 24px;
+    }
+    & img{
+        height: 20.05px;
+        width: 20.05px;
+    }
+}
