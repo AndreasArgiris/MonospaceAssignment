@@ -6,7 +6,7 @@
 - Download the zip file of project or clone repository.
 - To run correctly the App & to install packages,dependecies etc.
 `npm install`
-- To open the app to toyr local browser
+- To open the app to your local browser
 - `npm start` 
 ##  Suggestions:
 Open the project at 1920 x 1080 (no resposivness on other breakpoints applied)
