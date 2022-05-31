@@ -33,6 +33,6 @@ i don't found something wrong. So i put logic on my redux reducer to update the 
 refetching with GET don't updating anything after PUT.I think it's ok you will see.
 
 
-*******I'dont conclude api urls in .env to let you see if something is wrong with my api call.
+*I'dont innclude api urls in .env to let you see if something is wrong with my api call.
 
 # Monospace labs assignment
