@@ -31,6 +31,8 @@ after spending the most time there to leave the default styling as it is (on che
 updating really the api? . I spend a little bit time to check, all was good the headers, the body of request,
 i don't found something wrong. So i put logic on my redux reducer to update the state because
 refetching with GET don't updating anything after PUT.I think it's ok you will see.
+
+
 *******I'dont conclude api urls in .env to let you see if something is wrong with my api call.
 
 # Monospace labs assignment
